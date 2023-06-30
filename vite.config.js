@@ -9,8 +9,7 @@ export default defineConfig({
             refresh: true,
         }),
         vue({
-            template:
-            {
+            template: {
                 base: null,
                 includeAbsolute: false
             }
