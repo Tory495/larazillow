@@ -14,21 +14,22 @@
           :href="route('listing.destroy', listing.id)"
           method="DELETE"
           as="button"
-          >Delete</Link
         >
+          Delete
+        </Link>
       </div>
     </Box>
   </div>
 </template>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
-import ListingAddress from "@/Components/ListingAddress.vue";
-import Box from "@/Components/UI/Box.vue";
+import { Link } from '@inertiajs/vue3'
+import ListingAddress from '@/Components/ListingAddress.vue'
+import Box from '@/Components/UI/Box.vue'
 
 defineProps({
   listings: Array,
-});
+})
 </script>
 
 <style>
