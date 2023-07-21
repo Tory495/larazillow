@@ -23,14 +23,14 @@
 </template>
 
 <script setup>
-import Box from "@/Components/UI/Box.vue";
-import ListingAddress from "@/Components/ListingAddress.vue";
-import ListingSpace from "@/Components/ListingSpace.vue";
-import Price from "@/Components/Price.vue";
+import Box from '@/Components/UI/Box.vue'
+import ListingAddress from '@/Components/ListingAddress.vue'
+import ListingSpace from '@/Components/ListingSpace.vue'
+import Price from '@/Components/Price.vue'
 
 defineProps({
   listing: Object,
-});
+})
 </script>
 
 <style>
