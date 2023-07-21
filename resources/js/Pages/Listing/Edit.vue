@@ -4,65 +4,49 @@
       <div class="col-span-2">
         <label class="form-label">Beds</label>
         <input v-model.number="form.beds" class="form-input" type="text" />
-        <div v-if="form.errors.beds">
-          {{ form.errors.beds }}
-        </div>
+        <InputError :error-message="form.errors.beds" />
       </div>
 
       <div class="col-span-2">
         <label class="form-label">Baths</label>
         <input v-model.number="form.baths" class="form-input" type="text" />
-        <div v-if="form.errors.baths">
-          {{ form.errors.baths }}
-        </div>
+        <InputError :error-message="form.errors.baths" />
       </div>
 
       <div class="col-span-2">
         <label class="form-label">Area</label>
         <input v-model.number="form.area" class="form-input" type="text" />
-        <div v-if="form.errors.area">
-          {{ form.errors.area }}
-        </div>
+        <InputError :error-message="form.errors.area" />
       </div>
 
       <div class="col-span-4">
         <label class="form-label">City</label>
         <input v-model="form.city" class="form-input" type="text" />
-        <div v-if="form.errors.city">
-          {{ form.errors.city }}
-        </div>
+        <InputError :error-message="form.errors.city" />
       </div>
 
       <div class="col-span-2">
         <label class="form-label">Post Code</label>
         <input v-model="form.code" class="form-input" type="text" />
-        <div v-if="form.errors.code">
-          {{ form.errors.code }}
-        </div>
+        <InputError :error-message="form.errors.code" />
       </div>
 
       <div class="col-span-4">
         <label class="form-label">Street</label>
         <input v-model="form.street" class="form-input" type="text" />
-        <div v-if="form.errors.street">
-          {{ form.errors.street }}
-        </div>
+        <InputError :error-message="form.errors.street" />
       </div>
 
       <div class="col-span-2">
         <label class="form-label">Street Nr</label>
         <input v-model="form.street_nr" class="form-input" type="text" />
-        <div v-if="form.errors.street_nr">
-          {{ form.errors.street_nr }}
-        </div>
+        <InputError :error-message="form.errors.street_nr" />
       </div>
 
       <div class="col-span-6">
         <label class="form-label">Price</label>
         <input v-model.number="form.price" class="form-input" type="text" />
-        <div v-if="form.errors.price">
-          {{ form.errors.price }}
-        </div>
+        <InputError :error-message="form.errors.price" />
       </div>
 
       <div class="col-span-6">
