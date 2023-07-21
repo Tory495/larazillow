@@ -11,5 +11,5 @@
 <script setup>
 defineProps({
   listing: Object,
-});
+})
 </script>
