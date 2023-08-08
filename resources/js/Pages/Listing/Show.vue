@@ -13,7 +13,7 @@
       <Box>
         <template #header> Monthly Payment </template>
         <div>
-          <label class="label">Interest rate ({{ interestRate }}%)</label>
+          <label class="form-label">Interest rate ({{ interestRate }}%)</label>
           <input
             v-model.number="interestRate"
             class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
@@ -22,7 +22,7 @@
             max="30"
             step="0.1"
           />
-          <label class="label">Duration ({{ duration }} years)</label>
+          <label class="form-label">Duration ({{ duration }} years)</label>
           <input
             v-model.number="duration"
             type="range"
