@@ -4,7 +4,7 @@
       <div>
         <label for="email" class="form-label">E-mail</label>
         <input id="email" v-model="form.email" class="form-input" type="text" />
-        <div class="form-input-error">Potential errors</div>
+        <div v-if="form.errors.email" class="form-input-error">{{ form.errors.email }}</div>
       </div>
       <div class="mt-4">
         <label for="password" class="form-label">Password</label>
@@ -14,6 +14,7 @@
           class="form-input"
           type="password"
         />
+        <div v-if="form.errors.password" class="form-input-error">{{ form.errors.password }}</div>
       </div>
       <div class="mt-4">
         <button type="submit" class="btn-primary w-full">Submit</button>
@@ -31,4 +32,5 @@ const form = useForm({
 })
 
 const login = () => form.post(route('login.store'))
+
 </script>
