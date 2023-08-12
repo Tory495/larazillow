@@ -20,7 +20,9 @@
           >
             + New Listing
           </Link>
-          <div>Logout</div>
+          <div>
+            <Link :href="route('logout')" method="delete" as="button">Logout</Link>
+          </div>
         </div>
         <div v-else>
           <Link :href="route('login')">Login</Link>
