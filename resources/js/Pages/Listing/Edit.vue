@@ -58,6 +58,7 @@
   
 <script setup>
 import { useForm } from '@inertiajs/vue3'
+import InputError from '@/Components/UI/InputError.vue'
 
 const props = defineProps({
   listing: Object,
