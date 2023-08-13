@@ -6,7 +6,7 @@
       class="py-2 px-4 rounded-md"
       :href="link.url ?? ''"
       :as="link.url ? 'a' : 'button'"
-      :class="{ 'bg-indigo-500 dark:bg-indigo-800 text-gray-300': link.active }"
+      :class="{ 'bg-indigo-600 hover:bg-indigo-500 text-gray-300': link.active }"
       :disabled="!link.url"
       v-html="link.label"
     />
