@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
+    public function __construct()
+    {
+        return $this->authorizeResource(Listing::class, 'listing');
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -30,7 +35,7 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        Listing::create(
+        $request->user()->listings()->create(
             $request->validate([
                 'beds' => 'required|integer|min:0|max:20',
                 'baths' => 'required|integer|min:0|max:20',
@@ -42,6 +47,7 @@ class ListingController extends Controller
                 'price' => 'required|integer|min:1|max:2000000',
             ])
         );
+
         return redirect()->route("listing.index")
             ->with("success", "Listing was successfully created");
     }
