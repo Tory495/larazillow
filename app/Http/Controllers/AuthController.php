@@ -15,17 +15,19 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
-        if (!Auth::attempt($request->validate([
+        $credentials = $request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string',
-        ]), true)) {
-            throw ValidationException::withMessages([
-                'email' => 'Authentication failed'
-            ]);
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/listing');
         };
 
-        $request->session()->regenerate();
-        return redirect()->intended('/listing');
+        throw ValidationException::withMessages([
+            'email' => 'Authentication failed'
+        ]);
     }
 
     public function destroy(Request $request)
